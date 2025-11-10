@@ -38,7 +38,7 @@
 #  +----+-----------+
 
   
-#Selects employee ID and name, then returns the unique ID of each employee; otherwise null
+#Joins Employees table with EmployeeUNI table, then returns the unique ID and name of each employee; otherwise null
 SELECT EmployeeUNI.unique_id, Employees.name
 FROM EmployeeUNI
 RIGHT JOIN Employees
