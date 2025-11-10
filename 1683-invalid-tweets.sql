@@ -8,10 +8,7 @@
 #| content        | varchar |
 #+----------------+---------+
 
-# Selects the IDs of Tweets with greater than 15 characters and returns them as invalid
-SELECT tweet_id
-FROM Tweets
-WHERE LENGTH(content) > 15; 
+
 
 #Input:
 #+----------+-----------------------------------+
@@ -21,6 +18,12 @@ WHERE LENGTH(content) > 15;
 #| 2        | More than fifteen chars are here! |
 #+----------+-----------------------------------+
 
+#Selects the IDs of Tweets with greater than 15 characters, then returns the IDs as invalid
+SELECT tweet_id
+FROM Tweets
+WHERE LENGTH(content) > 15;
+
+  
 #Output: 
 #+----------+
 #| tweet_id |
