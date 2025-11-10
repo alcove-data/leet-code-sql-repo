@@ -21,7 +21,7 @@
 #  +-------------+----------+------------+
 
     
-# Selects ID of products that are both low-fat and recyclable, then returns only these IDs
+#Selects ID of products that are both low-fat and recyclable, then returns only these IDs
 SELECT product_id
     FROM Products
     WHERE low_fats = 'Y' AND recyclable = 'Y';
