@@ -38,7 +38,7 @@
 #  | 300        | Samsung      |
 #  +------------+--------------+
 
-#Joins the Sales table and Product table, then returns the product's name,sales year, and sales price
+#Joins the Sales table with Product table, then returns the product's name, sales year, and sales price
 SELECT Product.product_name, Sales.year, Sales.price
     FROM Product
     LEFT JOIN Sales
