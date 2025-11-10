@@ -1,7 +1,15 @@
 #1757. Recyclable and Low Fat Products
 
+#Table: Products
+#+-------------+---------+
+#| Column Name | Type    |
+#+-------------+---------+
+#| product_id  | int     |
+#| low_fats    | enum    |
+#| recyclable  | enum    |
+#+-------------+---------+
+
 #Input:
-#Products table:
 #+-------------+----------+------------+
 #| product_id  | low_fats | recyclable |
 #+-------------+----------+------------+
