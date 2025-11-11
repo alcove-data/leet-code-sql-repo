@@ -1,5 +1,3 @@
-# *Summary provided by ChatGPT
-
 # 🧩 LeetCode SQL 50
 
 **Platform:** [LeetCode](https://leetcode.com/studyplan/top-sql-50/)  
