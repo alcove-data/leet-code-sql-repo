@@ -30,7 +30,7 @@ Table: Examinations
 +--------------+---------+
 
 Input: 
-  Students:
+  Students
   +------------+--------------+
   | student_id | student_name |
   +------------+--------------+
@@ -40,7 +40,7 @@ Input:
   | 6          | Alex         |
   +------------+--------------+
   
-  Subjects:
+  Subjects
   +--------------+
   | subject_name |
   +--------------+
@@ -49,7 +49,7 @@ Input:
   | Programming  |
   +--------------+
   
-  Examinations:
+  Examinations
   +------------+--------------+
   | student_id | subject_name |
   +------------+--------------+
