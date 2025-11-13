@@ -10,8 +10,8 @@
 #| managerId   | int     |
 #+-------------+---------+
 
-#  Input: 
-#  Employee table:
+#Input: 
+#  Employee:
 #  +-----+-------+------------+-----------+
 #  | id  | name  | department | managerId |
 #  +-----+-------+------------+-----------+
@@ -38,7 +38,7 @@ SELECT Employee.name
     WHERE Manager.direct_report >= 5
   
   
-#  Output: 
+#Output: 
 #  +------+
 #  | name |
 #  +------+
