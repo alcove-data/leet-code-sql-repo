@@ -50,8 +50,7 @@ SELECT
   EmployeeUNI.unique_id, -- selects the unique id from from EmployeeUNI table
   Employees.name -- selects the employee's name from Employees table
 FROM EmployeeUNI
-RIGHT JOIN Employees -- considers all employees with or without a matching unique_id
-ON EmployeeUNI.id = Employees.id -- joins on id to match employees with their unique ids
+RIGHT JOIN Employees ON EmployeeUNI.id = Employees.id -- joins Employees to EmployeeUNI on id to match employees with their unique ids
 
 
 /*
