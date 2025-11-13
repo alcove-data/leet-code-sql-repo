@@ -33,7 +33,7 @@ Input:
 
 
 SELECT DISTINCT author_id AS id -- selects unique author ids and renames the column to 'id'
-    FROM Views -- table containing view records
+    FROM Views
     WHERE author_id = viewer_id -- filters rows where author viewed their own article
     ORDER BY author_id ASC; -- sort results by author id in ascending order
 
