@@ -1,31 +1,41 @@
-#1683. Invalid Tweets
+/*
+1683. Invalid Tweets
 
-#Table: Tweets
-#+----------------+---------+
-#| Column Name    | Type    |
-#+----------------+---------+
-#| tweet_id       | int     |
-#| content        | varchar |
-#+----------------+---------+
-
-#Input:
-#  +----------+-----------------------------------+
-#  | tweet_id | content                           |
-#  +----------+-----------------------------------+
-#  | 1        | Let us Code                       |
-#  | 2        | More than fifteen chars are here! |
-#  +----------+-----------------------------------+
+Write a solution to find the IDs of the invalid tweets.
+The tweet is invalid if the number of characters used in the content of the tweet is strictly greater than 15.
+Return the result table in any order.
+The result format is in the following example.
 
 
-#Selects the IDs of Tweets with greater than 15 characters, then returns the IDs as invalid
-SELECT tweet_id
+Table: Tweets
++----------------+---------+
+| Column Name    | Type    |
++----------------+---------+
+| tweet_id       | int     |
+| content        | varchar |
++----------------+---------+
+
+Input:
+  Tweets
+  +----------+-----------------------------------+
+  | tweet_id | content                           |
+  +----------+-----------------------------------+
+  | 1        | Let us Code                       |
+  | 2        | More than fifteen chars are here! |
+  +----------+-----------------------------------+
+*/
+
+
+SELECT tweet_id -- selects the id of the tweet
 FROM Tweets
-WHERE LENGTH(content) > 15;
+WHERE LENGTH(content) > 15; -- keep only tweets of length strictly greater than 15 characters
 
-  
-#Output: 
-#  +----------+
-#  | tweet_id |
-#  +----------+
-#  | 2        |
-#  +----------+
+
+/*
+Output: 
+  +----------+
+  | tweet_id |
+  +----------+
+  | 2        |
+  +----------+
+*/
