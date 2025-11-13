@@ -24,7 +24,7 @@ Table: EmployeeUNI
 +---------------+---------+
 
 Input: 
-  Employees:
+  Employees
   +----+----------+
   | id | name     |
   +----+----------+
@@ -35,7 +35,7 @@ Input:
   | 3  | Jonathan |
   +----+----------+
 
-  EmployeeUNI:
+  EmployeeUNI
   +----+-----------+
   | id | unique_id |
   +----+-----------+
