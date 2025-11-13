@@ -1,56 +1,62 @@
-#1068. Product Sales Analysis I
+/*
+1068. Product Sales Analysis I
 
-#Table: Sales
-#+-------------+-------+
-#| Column Name | Type  |
-#+-------------+-------+
-#| sale_id     | int   |
-#| product_id  | int   |
-#| year        | int   |
-#| quantity    | int   |
-#| price       | int   |
-#+-------------+-------+
+Table: Sales
++-------------+-------+
+| Column Name | Type  |
++-------------+-------+
+| sale_id     | int   |
+| product_id  | int   |
+| year        | int   |
+| quantity    | int   |
+| price       | int   |
++-------------+-------+
 
-#Table: Product
-#+--------------+---------+
-#| Column Name  | Type    |
-#+--------------+---------+
-#| product_id   | int     |
-#| product_name | varchar |
-#+--------------+---------+
+Table: Product
++--------------+---------+
+| Column Name  | Type    |
++--------------+---------+
+| product_id   | int     |
+| product_name | varchar |
++--------------+---------+
 
-#Input: 
-#  Sales:
-#  +---------+------------+------+----------+-------+
-#  | sale_id | product_id | year | quantity | price |
-#  +---------+------------+------+----------+-------+ 
-#  | 1       | 100        | 2008 | 10       | 5000  |
-#  | 2       | 100        | 2009 | 12       | 5000  |
-#  | 7       | 200        | 2011 | 15       | 9000  |
-#  +---------+------------+------+----------+-------+
+Input: 
+  Sales
+  +---------+------------+------+----------+-------+
+  | sale_id | product_id | year | quantity | price |
+  +---------+------------+------+----------+-------+ 
+  | 1       | 100        | 2008 | 10       | 5000  |
+  | 2       | 100        | 2009 | 12       | 5000  |
+  | 7       | 200        | 2011 | 15       | 9000  |
+  +---------+------------+------+----------+-------+
 
-#  Product:
-#  +------------+--------------+
-#  | product_id | product_name |
-#  +------------+--------------+
-#  | 100        | Nokia        |
-#  | 200        | Apple        |
-#  | 300        | Samsung      |
-#  +------------+--------------+
+  Product
+  +------------+--------------+
+  | product_id | product_name |
+  +------------+--------------+
+  | 100        | Nokia        |
+  | 200        | Apple        |
+  | 300        | Samsung      |
+  +------------+--------------+
+*/
 
-#Joins the Sales table with Product table, then returns the product's name, sales year, and sales price
-SELECT Product.product_name, Sales.year, Sales.price
+
+SELECT
+    Product.product_name, -- selects the product name
+    Sales.year, -- selects the year the sale was made
+    Sales.price -- selects the price of the sale
     FROM Product
-    LEFT JOIN Sales
-    ON Product.product_id = Sales.product_id
-    WHERE Sales.year IS NOT NULL
-  
+    LEFT JOIN Sales ON Product.product_id = Sales.product_id -- joins Product to Sales on product_id
+    WHERE Sales.year IS NOT NULL -- keeps only rows where a sale was recorded
 
-#Output: 
-#  +--------------+-------+-------+
-#  | product_name | year  | price |
-#  +--------------+-------+-------+
-#  | Nokia        | 2008  | 5000  |
-#  | Nokia        | 2009  | 5000  |
-#  | Apple        | 2011  | 9000  |
-#  +--------------+-------+-------+
+
+/*
+Output: 
+  +--------------+-------+-------+
+  | product_name | year  | price |
+  +--------------+-------+-------+
+  | Nokia        | 2008  | 5000  |
+  | Nokia        | 2009  | 5000  |
+  | Apple        | 2011  | 9000  |
+  +--------------+-------+-------+
+*/
