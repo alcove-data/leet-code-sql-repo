@@ -49,6 +49,7 @@ Input:
   +---------+---------------------+-----------+
 */
 
+
 SELECT
     Signups.user_id, -- selects each user_id
     ROUND(
