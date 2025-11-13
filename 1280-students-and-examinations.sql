@@ -73,7 +73,7 @@ SELECT
   Students.student_name, -- selects the student's name
   Subjects.subject_name, -- selects the subject name
   COUNT(Examinations.subject_name) AS attended_exams -- counts how many times the student attended an exam in for this subject
-    FROM Students -- table containing student names and ids
+    FROM Students
     CROSS JOIN Subjects -- creates every possible combination of student with and subject
     LEFT JOIN Examinations ON Students.student_id = Examinations.student_id AND Subjects.subject_name = Examinations.subject_name -- matches exams to the correct student and subject
     GROUP BY student_id, student_name, subject_name -- groups by student and subject
