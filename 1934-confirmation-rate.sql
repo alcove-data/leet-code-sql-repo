@@ -7,6 +7,7 @@ Write a solution to find the confirmation rate of each user.
 Return the result table in any order.
 The result format is in the following example.
 
+
 Table: Signups
 +----------------+----------+
 | Column Name    | Type     |
