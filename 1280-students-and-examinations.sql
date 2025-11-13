@@ -60,6 +60,7 @@
 #  | 1          | Math         |
 #  +------------+--------------+
 
+  
 #Joins all combinations of Students table and Subjects table using CROSS JOIN, then LEFT JOINs Examinations table on student ID
 #Returns a table with the count of attended exams by all students and the subject of the exam(s); handles NULL as no attendance
 SELECT Students.student_id, Students.student_name, Subjects.subject_name, COUNT(Examinations.subject_name) AS attended_exams
@@ -68,7 +69,6 @@ SELECT Students.student_id, Students.student_name, Subjects.subject_name, COUNT(
     LEFT JOIN Examinations ON Students.student_id = Examinations.student_id AND Subjects.subject_name = Examinations.subject_name
     GROUP BY student_id, student_name, subject_name
     ORDER BY student_id, subject_name
-
 
 
 #Output:
