@@ -27,7 +27,7 @@ Table: Confirmations
 +----------------+----------+
 
 Input: 
-  Signups:
+  Signups
   +---------+---------------------+
   | user_id | time_stamp          |
   +---------+---------------------+
@@ -37,7 +37,7 @@ Input:
   | 6       | 2020-12-09 10:39:37 |
   +---------+---------------------+
 
-  Confirmations:
+  Confirmations
   +---------+---------------------+-----------+
   | user_id | time_stamp          | action    |
   +---------+---------------------+-----------+
@@ -66,7 +66,7 @@ GROUP By Signups.user_id -- aggregate by user
 
 
 /*
-  Output: 
+Output: 
   +---------+-------------------+
   | user_id | confirmation_rate |
   +---------+-------------------+
