@@ -50,13 +50,21 @@ Input:
 */
 
 
+SELECT
+    Prices.product_id, -- selects product id from the Prices table
+    COALESCE(ROUND(SUM(Prices.price * UnitsSold.units) / SUM(UnitsSold.units), 2), 0) AS average_price -- calculates average selling price for each product, handling "no units sold" as having an average selling price of 0 
+FROM Prices
+LEFT JOIN UnitsSold ON Prices.product_id = UnitsSold.product_id -- joins the UnitsSold table and Prices table on product_id
+  AND UnitsSold.purchase_date BETWEEN Prices.start_date AND Prices.end_date -- only considers sales of a product between the start and end date of it's price
+GROUP BY Prices.product_id -- groups the results by product_id
+
 
 /*
 Output: 
-+------------+---------------+
-| product_id | average_price |
-+------------+---------------+
-| 1          | 6.96          |
-| 2          | 16.96         |
-+------------+---------------+
+  +------------+---------------+
+  | product_id | average_price |
+  +------------+---------------+
+  | 1          | 6.96          |
+  | 2          | 16.96         |
+  +------------+---------------+
 */
