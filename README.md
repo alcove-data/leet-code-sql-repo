@@ -72,13 +72,4 @@ Each section includes multiple problems arranged from easy → medium → challe
 
 ---
 
-## 🔗 Useful Links
-
-- 📚 [Official Study Plan on LeetCode](https://leetcode.com/studyplan/top-sql-50/)  
-- 💬 [LeetCode SQL Discussion Forum](https://leetcode.com/discuss/interview-question/database/)  
-- 🧾 [Community Solution Repositories (GitHub)](https://github.com/topics/leetcode-sql-50)  
-- 🎥 [YouTube SQL 50 Walkthroughs](https://www.youtube.com/results?search_query=leetcode+sql+50)
-
----
-
 ⭐ *This project represents a focused journey in mastering SQL through deliberate, daily problem solving — one query at a time.*
