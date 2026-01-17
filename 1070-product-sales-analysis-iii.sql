@@ -20,7 +20,7 @@ Table: Sales
 +-------------+-------+
 
 Input: 
-  Sales table:
+  Sales
   +---------+------------+------+----------+-------+
   | sale_id | product_id | year | quantity | price |
   +---------+------------+------+----------+-------+ 
@@ -44,7 +44,7 @@ WHERE (product_id, year) IN (SELECT product_id, MIN(year) -- subquery that selec
 
 
 /*
-Output: 
+  Output: 
   +------------+------------+----------+-------+
   | product_id | first_year | quantity | price |
   +------------+------------+----------+-------+ 
