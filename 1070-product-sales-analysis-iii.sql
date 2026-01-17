@@ -42,9 +42,8 @@ WHERE (product_id, year) IN (SELECT product_id, MIN(year) -- subquery that selec
   GROUP BY product_id -- groups the results by their product id
 )
 
-
 /*
-  Output: 
+Output: 
   +------------+------------+----------+-------+
   | product_id | first_year | quantity | price |
   +------------+------------+----------+-------+ 
